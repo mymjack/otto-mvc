@@ -26,7 +26,7 @@ class Header extends CI_Controller {
                     Log In
                 </a>';
         // }
-        $this->load->view('Header', $data);
+        return $this->load->view('Header', $data);
     }
 }
 

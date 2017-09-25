@@ -2,7 +2,7 @@
 <?=$head?>
   <body class="pace-dark <?=$body_classes?>">
     <!-- BEGIN HEADER -->
-    <?php $header->render(); ?>
+    <?=$header?>
     <!-- END HEADER -->
     <!-- BEGIN JUMBOTRON -->
     <section id="demo-hero-1" class="jumbotron full-vh" data-pages="parallax">
@@ -252,7 +252,7 @@
     </section>
     <!-- END CONTENT SECTION -->
     <!-- START FOOTER -->
-    <?php $footer->render(); ?>
+    <?=$footer?>
     <!-- END FOOTER -->
     <!-- BEGIN VENDOR JS -->
     <?=$footer_scripts?>

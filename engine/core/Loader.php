@@ -1090,9 +1090,21 @@ class CI_Loader {
 		// If the PHP installation does not support short tags we'll
 		// do a little string replacement, changing the short tags
 		// to standard PHP echo statements.
+		$include = file_get_contents($_ci_path);
+		if (strpos($include, 'VIEW_RETURN_SIGNAL') !== false)
+		{
+			$_ci_return = TRUE;
+		}
+
 		if ( ! is_php('5.4') && ! ini_get('short_open_tag') && config_item('rewrite_short_tags') === TRUE)
 		{
-			echo eval('?>'.preg_replace('/;*\s*\?>/', '; ?>', str_replace('<?=', '<?php echo ', file_get_contents($_ci_path))));
+			$include = preg_replace('/<\?=(.*?)\?>/is', '<?php echo $1; ?>', $include);
+
+			if (strpos($include, VIEW_RETURN_SIGNAL) !== false)
+			{
+				$include = str_replace(VIEW_RETURN_SIGNAL, '', $include);
+			}
+			echo eval('?>'.$include);
 		}
 		else
 		{

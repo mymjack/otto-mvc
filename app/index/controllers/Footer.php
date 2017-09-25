@@ -17,7 +17,7 @@ class Footer extends CI_Controller {
         $data['link_dashboard'] = BASEURL.'dashboard/';
         $data['copyright'] = 'Copyright &copy; 2017 Otto Group. All Rights Reserved';
 
-        $this->load->view('Footer', $data);
+        return $this->load->view('Footer', $data);
     }
 }
 

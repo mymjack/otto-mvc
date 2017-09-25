@@ -109,7 +109,7 @@ switch (ENVIRONMENT)
  * e.g. If your site is at public_html/abc, then:
  * $rewrite_base = 'abc';
  */
-	$rewrite_base = 'otto';
+	$rewrite_base = 'otto-mvc';
 
 /*
  *---------------------------------------------------------------
@@ -401,6 +401,9 @@ switch (ENVIRONMENT)
 	}
 
 	define('IMAGEPATH', $image_folder.DIRECTORY_SEPARATOR);
+
+	// If a view tpl file includes this, its result will not be printed but returned
+	define('VIEW_RETURN_SIGNAL', '<!-- End of element -->');
 
 /*
  * --------------------------------------------------------------------

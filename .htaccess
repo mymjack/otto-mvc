@@ -16,7 +16,7 @@ RewriteEngine On
 
 ## !IMPORTANT! Set your RewriteBase here and don't forget trailing and leading
 #  slashes.
-RewriteBase /otto/
+RewriteBase /otto-mvc/
 
 
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -18,3 +18,4 @@
     </div>
   </div>
 </section>
+<?=VIEW_RETURN_SIGNAL?>
