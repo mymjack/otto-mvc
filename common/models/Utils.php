@@ -1,6 +1,6 @@
 <?php
 
-class Utils extends CI_Model {
+class ModelUtils extends CI_Model {
 
 	public $adminName = 'admin';
 

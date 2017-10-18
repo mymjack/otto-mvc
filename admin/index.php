@@ -97,7 +97,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = 'engine';
+	$system_path = '../engine';
 
 /*
  *---------------------------------------------------------------
@@ -109,7 +109,7 @@ switch (ENVIRONMENT)
  * e.g. If your site is at public_html/abc, then:
  * $rewrite_base = 'abc';
  */
-	$rewrite_base = 'otto-mvc';
+	$rewrite_base = 'otto-mvc/admin';
 
 /*
  *---------------------------------------------------------------
@@ -128,10 +128,10 @@ switch (ENVIRONMENT)
  */
 
 	// Default application, this applications is used when request url points to site root
-	$application_folder = 'index';
+	$application_folder = './';
 	
 	// Common resource folder
-	$application_common = 'common';
+	$application_common = '../common';
 
 
 /*

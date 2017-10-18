@@ -76,8 +76,8 @@ class Index extends CI_Controller {
 
         $this->load->controller('header');
         $this->load->controller('footer');
-        $data['header'] = $this->header->render();
-        $data['footer'] = $this->footer->render();
+        $data['header'] = $this->controller_header->render();
+        $data['footer'] = $this->controller_footer->render();
         $data['body_classes'] = $this->document->render_body_classes();
 
         // Start the output

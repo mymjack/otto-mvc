@@ -280,8 +280,7 @@ class CI_Document {
 	 * @return string
 	 */
 	public function render_head($close_head=true) {
-		$output = '<!DOCTYPE html>'.PHP_EOL;
-		$output.= '<head>'.PHP_EOL;
+		$output = '<head>'.PHP_EOL;
 		$output.= '    <meta name="viewport" content="width=device-width, initial-scale=1.0">'.PHP_EOL;
 
 		$output.= '    <title>'.$this->title.'</title>'.PHP_EOL;

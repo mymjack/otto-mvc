@@ -127,11 +127,34 @@ switch (ENVIRONMENT)
  * NO TRAILING SLASH!
  */
 
+	// Name of folder containing all individual applications
+	$application = 'app';
+
+	// The reserved common application. Resources in this application is shared with all others.
+	$common = 'common';
+
 	// Default application, this applications is used when request url points to site root
-	$application_folder = 'index';
+	$application_folder = $application.'/index';
 	
-	// Common resource folder
-	$application_common = 'common';
+
+
+	// Strip anything up to first occurance of $rewrite_base/[index.php/]
+	if (($request = preg_replace('/.+?'.$rewrite_base.'\/(index.php\/)?/i', '', $_SERVER['REQUEST_URI'], 1)) != $_SERVER['REQUEST_URI']) 
+	{
+		// Strip the first slash and anything that follow
+		$request = preg_replace('/\/.*/i', '', $request);
+
+		// See if $request is one of the existing apps
+		if (!empty($request) && $request != $common && file_exists($application.DIRECTORY_SEPARATOR.$request)) 
+		{
+			// If so use this app instead of index
+			$application_folder = $application.DIRECTORY_SEPARATOR.$request;
+			$_SERVER['REQUEST_URI'] = preg_replace('/'.$request.'\/?/i', '', $_SERVER['REQUEST_URI'], 1);
+		}
+	}
+
+
+	$application_common = $application.DIRECTORY_SEPARATOR.$common;
 
 
 /*

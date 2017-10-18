@@ -279,7 +279,7 @@ class CI_Loader {
 
 		if (empty($name))
 		{
-			$name = $controller;
+			$name = 'controller_'.$controller;
 		}
 
 		if (in_array($name, $this->_ci_controllers, TRUE))
@@ -388,7 +388,7 @@ class CI_Loader {
 
 		if (empty($name))
 		{
-			$name = $model;
+			$name = 'model_'.$model;
 		}
 
 		if (in_array($name, $this->_ci_models, TRUE))
@@ -457,20 +457,21 @@ class CI_Loader {
 			}
 		}
 
-		$model = ucfirst($model);
+		$file = $model;
+		$model = 'Model'.ucfirst($model);
 		if ( ! class_exists($model, FALSE))
 		{
 			foreach ($this->_ci_model_paths as $mod_path)
 			{
-				if ( ! file_exists($mod_path.'models/'.$path.$model.'.php'))
+				if ( ! file_exists($mod_path.'models/'.$path.$file.'.php'))
 				{
 					continue;
 				}
 
-				require_once($mod_path.'models/'.$path.$model.'.php');
+				require_once($mod_path.'models/'.$path.$file.'.php');
 				if ( ! class_exists($model, FALSE))
 				{
-					throw new RuntimeException($mod_path."models/".$path.$model.".php exists, but doesn't declare class ".$model);
+					throw new RuntimeException($mod_path."models/".$path.$file.".php exists, but doesn't declare class ".$model);
 				}
 
 				break;
@@ -813,7 +814,7 @@ class CI_Loader {
 	 * @param	string		Language name
 	 * @return	object
 	 */
-	public function language($files, $lang = '')
+	public function lang($files, $lang = '')
 	{
 		get_instance()->lang->load($files, $lang);
 		return $this;
@@ -1102,7 +1103,7 @@ class CI_Loader {
 
 			if (strpos($include, VIEW_RETURN_SIGNAL) !== false)
 			{
-				$include = str_replace(VIEW_RETURN_SIGNAL, '', $include);
+				$include = str_replace(VIEW_RETURN_SIGNAL, '""', $include);
 			}
 			echo eval('?>'.$include);
 		}

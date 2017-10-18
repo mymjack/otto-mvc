@@ -1,5 +1,6 @@
-
-<?=$head?>
+<!DOCTYPE html>
+<html>
+  <?=$head?>
   <body class="pace-dark <?=$body_classes?>">
     <!-- BEGIN HEADER -->
     <?=$header?>
