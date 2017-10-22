@@ -52,8 +52,8 @@
  * NO TRAILING SLASH!
  */
 
-	// Default application, this applications is used when request url points to site root
-	$application_folder = './';
+	// Path to the application folder.
+	$application_folder = 'admin';
 	
 
 /*
@@ -143,5 +143,14 @@
 // The name of THIS file
 if (!defined('SELF')) {
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+}
+
+// Path to the front controller (this file) directory
+if (!defined('FCPATH')) {
+	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
+}
+
+if (!isset($image_folder)) {
+	$image_folder = '../images/'.basename(__DIR__);
 }
 require_once('../start.php');

@@ -52,7 +52,7 @@
  * NO TRAILING SLASH!
  */
 
-	// Name of the application folder. If not set, defaults to current folder name
+	// Path to the application folder.
 	$application_folder = 'index';
 	
 
@@ -150,10 +150,6 @@ if (!defined('SELF')) {
 // Path to the front controller (this file) directory
 if (!defined('FCPATH')) {
 	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
-}
-
-if (!isset($application_folder)) {
-	$application_folder = basename(__DIR__) ;
 }
 
 if (!isset($image_folder)) {
