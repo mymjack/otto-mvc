@@ -6,32 +6,32 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><i class="fa fa-user-circle" aria-hidden="true"></i> Log In</h4>
+                <h4 class="modal-title"><i class="fa fa-user-circle" aria-hidden="true"></i><?=$text_login?></h4>
             </div>
             <div class="modal-body">
                 <form role="form" id="loginForm">
                     <div class="form-group form-group-default m-t-30 ">
-                            <label>Phone</label>
+                            <label><?=$text_phone?></label>
                             <!-- <input type="text" name="phone" id="phone" class="form-control" value="+1&nbsp;" required> -->
                             <input type="text" name="phone" id="phone" class="form-control" required>
                     </div>
                     <div class="form-group form-group-default ">
-                            <label>Password</label>
+                            <label><?=$text_password?></label>
                             <input type="password" name="password" id="password" class="form-control" required>
                     </div>
 
                     <div class="checkbox check-primary checkbox-circle m-t-20">
                             <input type="checkbox" value="1" id="checkbox9">
-                            <label for="checkbox9">Remember me</label>
-                            <p style="float:right;text-align:right; font-size:0.9em;"><a href="#">Forgot Password?</a></p>
+                            <label for="checkbox9"><?=$text_remember?></label>
+                            <p style="float:right;text-align:right; font-size:0.9em;"><a href="#"><?=$text_forgot_password?></a></p>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <!-- <button type="button" id="loginButton" class="btn btn-primary" data-dismiss="modal" style="width:100%">Log In <i class="fa fa-angle-right" aria-hidden="true"></i></button> -->
                 <button type="button" id="loginButton" class="btn btn-primary" style="width:100%;line-height:200%;">Log In <i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                <p id="login-border" class="m-t-20">By using Otto services, I agree to <a href="#">Terms & Services</a></p>
-                <p class="m-t-20">No account? <a href="dashboard/register.php">Register</a></p>
+                <p id="login-border" class="m-t-20"><?=$text_agree?><a href="#"><?=$link_terms?></a></p>
+                <p class="m-t-20"><?=$text_no_account?><a href="<?=$url_register?>"><?=$link_register?></a></p>
             </div>
         </div>
     </div>

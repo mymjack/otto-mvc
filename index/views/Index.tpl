@@ -28,9 +28,9 @@
                         <div class="row sm-m-b-30">
                           <div class="col-md-6 col-md-offset-3 p-b-90 sm-p-b-40 sm-m-b-30">
                             <h1 class="light text-white sm-no-margin" data-swiper-parallax="-15%">
-                                      <a href="estimate_price.php" style="color:white">Buy Plane Ticket (50% Off)</a>
+                                      <a href="estimate_price.php" style="color:white"><?=$text_buy_ticket?></a>
                                         </h1>
-                            <a href="estimate_price.php" class="block-title text-white link">Get Estimate</a>
+                            <a href="estimate_price.php" class="block-title text-white link"><?=$link_estimate?></a>
                           </div>
                         </div>
                       </div>
@@ -60,9 +60,9 @@
                         <div class="row sm-m-b-30">
                           <div class="col-md-6 col-md-offset-3 p-b-90 sm-p-b-40 sm-m-b-30">
                             <h1 class="light text-white sm-no-margin" data-swiper-parallax="-15%">
-                                      <a href="register_order.php" style="color:white">Send Item</a>
+                                      <a href="register_order.php" style="color:white"><?=$text_send_item?></a>
                                         </h1>
-                            <a href="register_order.php" class="block-title text-white link">Create Form</a>
+                            <a href="register_order.php" class="block-title text-white link"><?=$link_send_item?></a>
                           </div>
                         </div>
                       </div>
@@ -92,9 +92,9 @@
                         <div class="row sm-m-b-30">
                           <div class="col-md-6 col-md-offset-3 p-b-90 sm-p-b-40 sm-m-b-30">
                             <h1 class="light text-white sm-no-margin" data-swiper-parallax="-15%">
-                                      Purchase Taobao
+                                      <?=$text_purchase_taobao?>
                                         </h1>
-                            <a href="#" class="block-title text-white link">Start Order</a>
+                            <a href="#" class="block-title text-white link"><?=$link_purchase_taobao?></a>
                           </div>
                         </div>
                       </div>
@@ -121,12 +121,11 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
-            <h6 class="block-title m-b-0">Tracking</h6>
-            <h1 class="m-t-5 light">Track your orders</h1>
-            <p class="m-t-20">Tracking will return the current status of your order.
-            </p>
+            <h6 class="block-title m-b-0"><?=$text_tracking?></h6>
+            <h1 class="m-t-5 light"><?=$desc_tracking?></h1>
+            <p class="m-t-20"><?=$text_track_order?></p>
             <br>
-            <input type="text" style="height:33px;width:40%" placeholder="OTXXXXXXXXXXXXXXXX"><span><button class="btn btn-primary">Submit</button></span>
+            <input type="text" style="height:33px;width:40%" placeholder="OTXXXXXXXXXXXXXXXX"><span><button class="btn btn-primary"><?=$button_submit?></button></span>
             <br>
             <img src="<?=IMAGEURL?>arrow_down.png" class="m-t-30" alt="">
           </div>
@@ -143,16 +142,16 @@
             <img class="p-r-40 m-t-10 xs-image-responsive-height sm-no-padding lazy" src="<?=IMAGEURL?>ipad_2.jpg" alt="">
           </div>
           <div class="col-sm-6 col-sm-height col-middle col-lg-4 col-md-4 xs-text-center sm-p-l-30">
-            <h1 class="light md-no-margin sm-m-t-30">How It Works?</h1>
+            <h1 class="light md-no-margin sm-m-t-30"><?=$text_how_it_works?></h1>
             <!-- <h6 class="block-title m-t-50">1) List your current flight or purchase ticket from us</h6>
             <p class="m-t-15">Our long standing vision has been to bypass the usual admin dashboard structure, and move forward with a more vary and sophisticated yet simple framework </p>
             <p class="muted font-arial small-text m-t-30">A product is accessible when all people&mdash;regardless of ability&mdash;can navigate it,
               <br> understand it, and use it to achieve their goals.</p> -->
             <!-- <h6 class="block-title m-t-50">2) Wait for contact to receive your luggages or items to be delivered</h6> -->
             <!-- <h6 class="block-title m-t-50">3) Finish the delivery and get paid</h6> -->
-            <p class="m-t-15">1) List your current flight or purchase ticket from us</p>
-            <p class="m-t-15">2) Wait for contact to receive your luggages or items to be delivered</p>
-            <p class="m-t-15">3) Finish the delivery and get paid</p>
+            <p class="m-t-15"><?=$text_how_it_works_1?></p>
+            <p class="m-t-15"><?=$text_how_it_works_2?></p>
+            <p class="m-t-15"><?=$text_how_it_works_3?></p>
           </div>
           <div class="col-lg-2 col-md-1 hidden-sm"></div>
         </div>
@@ -165,9 +164,9 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2">
             <div class="text-center relative p-b-100 m-b-70 p-t-40">
-              <h6 class="block-title m-t-70 m-b-0">Recent</h6>
-              <h1 class="col-sm-12 p-b-10 m-t-5">Recent Shipments + Recent Items</h1>
-              <button type="button" class="btn btn-lg btn-primary btn-cons btn-rounded m-t-20">Explore</button>
+              <h6 class="block-title m-t-70 m-b-0"><?=$text_recent?></h6>
+              <h1 class="col-sm-12 p-b-10 m-t-5"><?=$desc_recent?></h1>
+              <button type="button" class="btn btn-lg btn-primary btn-cons btn-rounded m-t-20"><?=$button_explore?></button>
               <br>
             </div>
           </div>
@@ -185,9 +184,9 @@
         <div class="col-md-8 col-md-offset-2 ">
           <div class="text-center">
             <img src="<?=IMAGEURL?>arrow_down.png" alt="">
-            <h5 class="block-title m-t-40 hint-text m-b-0">Overall Numbers </h5>
-            <h1 class="light m-t-5">How far have we got?</h1>
-            <h5 class="hint-text">From hundreds of shipments within months of operation</h5>
+            <h5 class="block-title m-t-40 hint-text m-b-0"><?=$text_achievements?></h5>
+            <h1 class="light m-t-5"><?=$desc_achievements?></h1>
+            <h5 class="hint-text"><?=$text_achievements_2?></h5>
           </div>
           <div class="row m-t-45">
             <div class="col-sm-4">
@@ -196,7 +195,7 @@
                 </div>
               </div>
               <h3 class="no-margin"><span data-pages-animate="number" data-value="2000" data-animation-duration="800">0</span>+</h3>
-              <p class="font-arial hint-text fs-12"><i class="fa fa-globe" aria-hidden="true"></i> Items
+              <p class="font-arial hint-text fs-12"><i class="fa fa-globe" aria-hidden="true"></i> <?=$text_items?>
               </p>
               <p>
               </p>
@@ -207,7 +206,7 @@
                 </div>
               </div>
               <h3 class=" no-margin"><span data-pages-animate="number" data-value="120" data-animation-duration="800">0</span>+</h3>
-              <p class="font-arial hint-text fs-12"><i class="fa fa-plane" aria-hidden="true"></i> Shipments
+              <p class="font-arial hint-text fs-12"><i class="fa fa-plane" aria-hidden="true"></i> <?=$text_shipments?>
               </p>
               <p>
               </p>
@@ -218,7 +217,7 @@
                 </div>
               </div>
               <h3 class=" no-margin"><span data-pages-animate="number" data-value="60" data-animation-duration="800">0</span>%</h3>
-              <p class="font-arial hint-text fs-12"><i class="fa fa-money" aria-hidden="true"></i> Average Savings
+              <p class="font-arial hint-text fs-12"><i class="fa fa-money" aria-hidden="true"></i> <?=$text_savings?>
               </p>
               <p>
               </p>
@@ -233,7 +232,7 @@
     <section class="p-b-50 p-t-50 bg-master-dark">
       <div class="container p-b-50 p-t-50">
         <div class="text-center">
-          <h1 class="text-white col-sm-12 p-b-10">Coming Soon..</h1>
+          <h1 class="text-white col-sm-12 p-b-10"><?=$text_coming_soon?></h1>
         </div>
         <!-- <div class="row">
           <div class="col-md-8 col-md-offset-2">

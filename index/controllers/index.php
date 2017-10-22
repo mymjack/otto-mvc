@@ -14,13 +14,13 @@ class Index extends CI_Controller {
 
         // Load language
         $this->lang->load('Index', 'en-gb');
+        $data = $this->lang->language;
 
         $this->document->set_title($this->lang->line('title'));
 
         // Load model
         // $this->load->model('Index');
 
-        $data = array();
 
         // Plugins
         $this->document->add_style('assets/pace/pace-theme-flash.css');

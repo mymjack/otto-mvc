@@ -1,4 +1,5 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ModalLogin extends CI_Controller {
 
@@ -11,7 +12,12 @@ class ModalLogin extends CI_Controller {
 
     public function index()
     {
-    	return $this->load->view('modals/ModalLogin', array(), true);
+        $this->lang->load('modals/ModalLogin', 'en-gb');
+        $data = $this->lang->language;
+
+        $data['url_register'] = ROOTURL . 'dashboard/register';
+
+    	return $this->load->view('modals/ModalLogin', $data, true);
     }
 }
 ?>
