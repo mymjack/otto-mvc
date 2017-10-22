@@ -63,10 +63,7 @@ class CI_Loader {
 	 *
 	 * @var	array
 	 */
-	protected $_ci_view_paths =	array(
-		APPPATH.'views'.DIRECTORY_SEPARATOR => TRUE, 
-		APPCOMMON.'views'.DIRECTORY_SEPARATOR => TRUE
-	);
+	protected $_ci_view_paths =	array();
 
 	/**
 	 * List of paths to load libraries from
@@ -154,6 +151,10 @@ class CI_Loader {
 	{
 		$this->_ci_ob_level = ob_get_level();
 		$this->_ci_classes =& is_loaded();
+
+		// Old ?PHP version? fix. Var assignment must be in a function
+		$this->_ci_view_paths[APPPATH.'views'.DIRECTORY_SEPARATOR] = TRUE;
+		$this->_ci_view_paths[APPCOMMON.'views'.DIRECTORY_SEPARATOR] = TRUE;
 
 		log_message('info', 'Loader Class Initialized');
 	}
@@ -279,7 +280,7 @@ class CI_Loader {
 
 		if (empty($name))
 		{
-			$name = 'controller_'.$controller;
+			$name = 'controller_'.strtolower($controller);
 		}
 
 		if (in_array($name, $this->_ci_controllers, TRUE))
@@ -388,7 +389,7 @@ class CI_Loader {
 
 		if (empty($name))
 		{
-			$name = 'model_'.$model;
+			$name = 'model_'.strtolower($model);
 		}
 
 		if (in_array($name, $this->_ci_models, TRUE))
@@ -1092,19 +1093,11 @@ class CI_Loader {
 		// do a little string replacement, changing the short tags
 		// to standard PHP echo statements.
 		$include = file_get_contents($_ci_path);
-		if (strpos($include, 'VIEW_RETURN_SIGNAL') !== false)
-		{
-			$_ci_return = TRUE;
-		}
 
 		if ( ! is_php('5.4') && ! ini_get('short_open_tag') && config_item('rewrite_short_tags') === TRUE)
 		{
 			$include = preg_replace('/<\?=(.*?)\?>/is', '<?php echo $1; ?>', $include);
 
-			if (strpos($include, VIEW_RETURN_SIGNAL) !== false)
-			{
-				$include = str_replace(VIEW_RETURN_SIGNAL, '""', $include);
-			}
 			echo eval('?>'.$include);
 		}
 		else

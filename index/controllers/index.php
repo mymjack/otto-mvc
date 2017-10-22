@@ -43,8 +43,8 @@ class Index extends CI_Controller {
         $this->document->add_footer_script('assets/tether/js/tether.min.js');
         $this->document->add_footer_script('assets/bootstrap/js/bootstrap.js');
         $this->document->add_footer_script('assets/swiper/js/swiper.jquery.min.js');
-        $this->document->add_footer_script('assets/velocity/velocity.min.js');
-        $this->document->add_footer_script('assets/velocity/velocity.ui.js');
+        // $this->document->add_footer_script('assets/velocity/velocity.min.js');
+        // $this->document->add_footer_script('assets/velocity/velocity.ui.js');
         $this->document->add_footer_script('assets/jquery-appear/jquery.appear.js');
         $this->document->add_footer_script('assets/animateNumber/jquery.animateNumbers.js');
 
@@ -57,9 +57,6 @@ class Index extends CI_Controller {
 
         $data['head'] = $this->document->render_head(false);
         $data['head'] .= '
-            <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <link rel="apple-touch-icon" href="pages/ico/60.png">
             <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
             <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
@@ -68,16 +65,14 @@ class Index extends CI_Controller {
             <meta name="apple-mobile-web-app-capable" content="yes">
             <meta name="apple-touch-fullscreen" content="yes">
             <meta name="apple-mobile-web-app-status-bar-style" content="default">
-            <meta content="" name="description" />
-            <meta content="" name="author" />
         ';
 
         $data['footer_scripts'] = $this->document->render_footer_scripts();
 
-        $this->load->controller('header');
-        $this->load->controller('footer');
-        $data['header'] = $this->controller_header->render();
-        $data['footer'] = $this->controller_footer->render();
+        $this->load->controller('Header');
+        $this->load->controller('Footer');
+        $data['header'] = $this->controller_header->index();
+        $data['footer'] = $this->controller_footer->index();
         $data['body_classes'] = $this->document->render_body_classes();
 
         // Start the output
@@ -86,4 +81,3 @@ class Index extends CI_Controller {
 }
 
 ?>
-

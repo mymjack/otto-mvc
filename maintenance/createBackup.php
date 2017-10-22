@@ -1,5 +1,5 @@
 <?php
-if (!is_dir('../ottoBackups')) {
-    mkdir('../ottoBackups');         
+if (!is_dir('../ottoMVCBackups')) {
+    mkdir('../ottoMVCBackups');         
 }
-exec('zip -r ../ottoBackups/backup'.date('Ymd-Hms').'.zip ./');
+exec('zip -r ../ottoMVCBackups/backup'.date('Ymd-Hms').'.zip ./');

@@ -9,7 +9,7 @@ class Header extends CI_Controller {
         // Your own constructor code
     }
 
-    public function render()
+    private function getOutputDat()
     {
         $data = array();
         // if($this->session->get['login_id']){
@@ -17,7 +17,7 @@ class Header extends CI_Controller {
         //     $result = mysqli_query($db, $sql);
         //     $name = mysqli_fetch_assoc($result);
         //     $data['user_button'] = '
-        //         <a class="btn btn-sm btn-bordered fs-12 btn-white" href="'.BASEURL.'dashboard/">
+        //         <a class="btn btn-sm btn-bordered fs-12 btn-white" href="'.ROOTURL.'dashboard/">
         //             <i class="fa fa-user-circle-o" aria-hidden="true"></i> '. $name['firstName'] .'
         //         </a>';
         // } else {
@@ -26,8 +26,18 @@ class Header extends CI_Controller {
                     Log In
                 </a>';
         // }
-        return $this->load->view('Header', $data);
+                return $data;
+    }
+
+    public function index()
+    {
+        $data = $this->getOutputDat();
+        return $this->load->view('Header', $data, true);
+    }
+
+    public function render()
+    {
+        $data = $this->getOutputDat();
+        $this->load->view('Header', $data);
     }
 }
-
-

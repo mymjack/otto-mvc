@@ -75,6 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+	// 'hostname' => '198.178.116.238',
+	// 'username' => 'ottoco_admin',
+	// 'password' => 'Shgl123.',
+	// 'database' => 'ottoco_db1',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',

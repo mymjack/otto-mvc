@@ -21,7 +21,7 @@ class Index extends CI_Controller {
         // $data = array_merge($data, $this->lang->language);
 
         // Load model
-        $this->load->model('index');
+        $this->load->model('Index');
         $this->model_index->foo();
 
         // Set title and body classes
@@ -41,4 +41,3 @@ class Index extends CI_Controller {
 }
 
 ?>
-

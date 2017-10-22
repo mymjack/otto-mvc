@@ -53,5 +53,3 @@
         </div>
     </div>
 </nav>
-
-<?=VIEW_RETURN_SIGNAL?>

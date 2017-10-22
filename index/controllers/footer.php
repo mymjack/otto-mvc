@@ -1,4 +1,3 @@
-
 <?php
 
 class Footer extends CI_Controller {
@@ -10,15 +9,25 @@ class Footer extends CI_Controller {
         // Your own constructor code
     }
 
-    public function render()
+    private function getOutputDat()
     {
         $data = array();
-        $data['link_home'] = BASEURL;
-        $data['link_dashboard'] = BASEURL.'dashboard/';
+        $data['link_home'] = ROOTURL;
+        $data['link_dashboard'] = ROOTURL.'dashboard/';
         $data['copyright'] = 'Copyright &copy; 2017 Otto Group. All Rights Reserved';
+        return $data;
+    }
 
-        return $this->load->view('Footer', $data);
+    public function index()
+    {
+        
+        $data = $this->getOutputDat();
+        return $this->load->view('Footer', $data, true);
+    }
+
+    public function render()
+    {
+        $data = $this->getOutputDat();
+        $this->load->view('Footer', $data);
     }
 }
-
-

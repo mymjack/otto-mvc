@@ -35,7 +35,7 @@
  * @since	Version 2.0.0
  * @filesource
  */
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('ROOTPATH') OR exit('No direct script access allowed');
 
 /**
  * Document Class
@@ -53,7 +53,7 @@ class CI_Document {
 	 *
 	 * @var	array(string => string)
 	 */
-	private $paths = array(APPPATH => APPURL, APPCOMMON => APPCOMMONURL, BASEPATH => BASEURL );
+	private $paths = array(APPPATH => APPURL, APPCOMMON => APPCOMMONURL, ROOTPATH => ROOTURL );
 
 	/**
 	 * List of all the styles in header
@@ -281,6 +281,8 @@ class CI_Document {
 	 */
 	public function render_head($close_head=true) {
 		$output = '<head>'.PHP_EOL;
+		$output.= '    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />';
+	    $output.= '    <meta charset="utf-8" />';
 		$output.= '    <meta name="viewport" content="width=device-width, initial-scale=1.0">'.PHP_EOL;
 
 		$output.= '    <title>'.$this->title.'</title>'.PHP_EOL;

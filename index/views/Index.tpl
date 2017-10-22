@@ -15,7 +15,7 @@
             <div class="swiper-slide fit slide-1">
               <!-- BEGIN IMAGE PARRALAX -->
               <div class="slider-wrapper">
-                <div class="bg-image full-width full-height" data-swiper-parallax="30%" data-pages-bg-image="<?=APPURL?>images/bg_pattern_1.jpg">
+                <div class="bg-image full-width full-height" data-swiper-parallax="30%" data-pages-bg-image="<?=IMAGEURL?>bg_pattern_1.jpg">
                 </div>
               </div>
               <!-- END IMAGE PARRALAX -->
@@ -39,15 +39,15 @@
                 </div>
               </div>
               <!-- END CONTENT -->
-              <img class="ipad lazy" draggable="false" src="<?=APPURL?>images/ipad_1.png" alt="" title="" data-swiper-parallax="80%">
-              <img class="bg-elements hidden-xs lazy" src="<?=APPURL?>images/bg_elements_1.png" data-swiper-parallax="-20%" alt="">
+              <img class="ipad lazy" draggable="false" src="<?=IMAGEURL?>ipad_1.png" alt="" title="" data-swiper-parallax="80%">
+              <img class="bg-elements hidden-xs lazy" src="<?=IMAGEURL?>bg_elements_1.png" data-swiper-parallax="-20%" alt="">
             </div>
             <!-- END SLIDE -->
             <!-- BEGIN SLIDE -->
             <div class="swiper-slide fit slide-3">
               <!-- BEGIN IMAGE PARRALAX -->
               <div class="slider-wrapper">
-                <div class="bg-image full-width full-height" data-swiper-parallax="30%" data-pages-bg-image="<?=APPURL?>images/bg_pattern_3.jpg">
+                <div class="bg-image full-width full-height" data-swiper-parallax="30%" data-pages-bg-image="<?=IMAGEURL?>bg_pattern_3.jpg">
                 </div>
               </div>
               <!-- END IMAGE PARRALAX -->
@@ -71,15 +71,15 @@
                 </div>
               </div>
               <!-- END CONTENT -->
-              <img class="ipad lazy" draggable="false" src="<?=APPURL?>images/ipad_4.png" alt="" title="" data-swiper-parallax="80%">
-              <img class="bg-elements hidden-xs lazy" src="<?=APPURL?>images/bg_elements_3.png" data-swiper-parallax="-20%" alt="">
+              <img class="ipad lazy" draggable="false" src="<?=IMAGEURL?>ipad_4.png" alt="" title="" data-swiper-parallax="80%">
+              <img class="bg-elements hidden-xs lazy" src="<?=IMAGEURL?>bg_elements_3.png" data-swiper-parallax="-20%" alt="">
             </div>
             <!-- END SLIDE -->
             <!-- BEGIN SLIDE -->
             <div class="swiper-slide fit slide-2">
               <!-- BEGIN IMAGE PARRALAX -->
               <div class="slider-wrapper">
-                <div class="bg-image full-width full-height" data-swiper-parallax="30%" data-pages-bg-image="<?=APPURL?>images/bg_pattern_2.jpg">
+                <div class="bg-image full-width full-height" data-swiper-parallax="30%" data-pages-bg-image="<?=IMAGEURL?>bg_pattern_2.jpg">
                 </div>
               </div>
               <!-- END IMAGE PARRALAX -->
@@ -103,8 +103,8 @@
                 </div>
               </div>
               <!-- END CONTENT -->
-              <img class="ipad lazy" draggable="false" src="<?=APPURL?>images/ipad_3.png" alt="" title="" data-swiper-parallax="80%">
-              <img class="bg-elements hidden-xs lazy" src="<?=APPURL?>images/bg_elements_2.png" data-swiper-parallax="-20%" alt="">
+              <img class="ipad lazy" draggable="false" src="<?=IMAGEURL?>ipad_3.png" alt="" title="" data-swiper-parallax="80%">
+              <img class="bg-elements hidden-xs lazy" src="<?=IMAGEURL?>bg_elements_2.png" data-swiper-parallax="-20%" alt="">
             </div>
             <!-- END SLIDE -->
           </div>
@@ -128,7 +128,7 @@
             <br>
             <input type="text" style="height:33px;width:40%" placeholder="OTXXXXXXXXXXXXXXXX"><span><button class="btn btn-primary">Submit</button></span>
             <br>
-            <img src="<?=APPURL?>images/arrow_down.png" class="m-t-30" alt="">
+            <img src="<?=IMAGEURL?>arrow_down.png" class="m-t-30" alt="">
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
         <div class="row row-sm-height sm-m-l-15 sm-m-r-15">
           <div class="col-lg-2 col-md-1 hidden-sm"></div>
           <div class="col-sm-6 col-lg-4 col-md-5 col-sm-height col-middle sm-text-center">
-            <img class="p-r-40 m-t-10 xs-image-responsive-height sm-no-padding lazy" src="<?=APPURL?>images/ipad_2.jpg" alt="">
+            <img class="p-r-40 m-t-10 xs-image-responsive-height sm-no-padding lazy" src="<?=IMAGEURL?>ipad_2.jpg" alt="">
           </div>
           <div class="col-sm-6 col-sm-height col-middle col-lg-4 col-md-4 xs-text-center sm-p-l-30">
             <h1 class="light md-no-margin sm-m-t-30">How It Works?</h1>
@@ -174,9 +174,9 @@
         </div>
       </div>
       <div class="top-left bottom-right no-overflow full-width full-height">
-        <img src="<?=APPURL?>images/elements_1.png" class="inner lazy" alt="">
+        <img src="<?=IMAGEURL?>elements_1.png" class="inner lazy" alt="">
       </div>
-      <img class="iphone lazy" src="<?=APPURL?>images/iphone.png" data-pages="float" data-max-top-translate="40" data-max-bottom-translate="40" data-speed="0.1" data-delay="1000" data-curve="ease" alt="">
+      <img class="iphone lazy" src="<?=IMAGEURL?>iphone.png" data-pages="float" data-max-top-translate="40" data-max-bottom-translate="40" data-speed="0.1" data-delay="1000" data-curve="ease" alt="">
     </section>
     <!-- END CONTENT SECTION -->
     <!-- START CONTENT SECTION -->
@@ -184,7 +184,7 @@
       <div class="container">
         <div class="col-md-8 col-md-offset-2 ">
           <div class="text-center">
-            <img src="<?=APPURL?>images/arrow_down.png" alt="">
+            <img src="<?=IMAGEURL?>arrow_down.png" alt="">
             <h5 class="block-title m-t-40 hint-text m-b-0">Overall Numbers </h5>
             <h1 class="light m-t-5">How far have we got?</h1>
             <h5 class="hint-text">From hundreds of shipments within months of operation</h5>
@@ -241,7 +241,7 @@
               <div class="text-center">
                 <h1 class="text-white col-sm-12 p-b-10">Crafted with detail for a great start!
                         front-end plus back-end.</h1>
-                <img src="<?=APPURL?>images/themeforest_logo.png" class="m-t-5" alt="">
+                <img src="<?=IMAGEURL?>themeforest_logo.png" class="m-t-5" alt="">
                 <p class="fs-12 text-white m-t-30 font-arial"><span class="hint-text">Exclusive only at
                         Envato Marketplace,<br></span> Themeforest See Standard licenses &amp; Extended licenses
                 </p>
