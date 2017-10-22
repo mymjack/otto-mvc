@@ -41,7 +41,7 @@ class Index extends CI_Controller {
         $this->document->add_footer_script('assets/pace/pace.min.js');
         $this->document->add_footer_script('assets/js/pages.image.loader.js');
         $this->document->add_footer_script('assets/tether/js/tether.min.js');
-        $this->document->add_footer_script('assets/bootstrap/js/bootstrap.js');
+        $this->document->add_footer_script('assets/bootstrap/js/bootstrap3.js');
         $this->document->add_footer_script('assets/swiper/js/swiper.jquery.min.js');
         // $this->document->add_footer_script('assets/velocity/velocity.min.js');
         // $this->document->add_footer_script('assets/velocity/velocity.ui.js');
@@ -71,8 +71,10 @@ class Index extends CI_Controller {
 
         $this->load->controller('Header');
         $this->load->controller('Footer');
+        $this->load->controller('modals/ModalLogin');
         $data['header'] = $this->controller_header->index();
         $data['footer'] = $this->controller_footer->index();
+        $data['modal_login'] = $this->controller_modallogin->index();
         $data['body_classes'] = $this->document->render_body_classes();
 
         // Start the output

@@ -255,41 +255,12 @@
     <!-- START FOOTER -->
     <?=$footer?>
     <!-- END FOOTER -->
+
+    <?=$modal_login?>
+
     <!-- BEGIN VENDOR JS -->
     <?=$footer_scripts?>
 
-    <script type="text/javascript">
-
-        $(document).ready(function() {
-            $("#loginButton").click(function(){
-
-                /****************** 2017-09-21 Jack *******************/
-                $('#login-failed').css('height',0);
-
-                login({
-                    success: function(data={}){
-                        $wait_time = parseFloat($('.modal').css('transition').match(/\d+(\.\d+)?/)[0]) * 1000 || 150;
-                        $('.modal').removeClass('in');
-                        setTimeout(function(){
-                            window.location.href = data.redirect;
-                        }, $wait_time);
-                    },
-                    error: function(data={}){
-                        if ($('#login-failed').length) $('#login-failed').html(data.message);
-                        else $("#loginButton").after($('<p id="login-failed" style="height:0">'+data.message+'</p>'));
-                        setTimeout(function(){$('#login-failed').css('height',$('#login-failed')[0].scrollHeight);}, 20);
-                    }
-                });
-
-            });
-        });
-    </script>
     <!-- END PAGES LIB -->
-    <div id="notification" class="modal">
-      <div class="modal-content">
-        <h4>Login failed</h4>
-        <p>Your login credentials were not </p>
-      </div>
-    </div>
   </body>
 </html>

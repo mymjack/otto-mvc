@@ -1,21 +1,6 @@
-<?php
 
-class Login extends CI_Controller {
-
-
-    public function __construct()
-    {
-        parent::__construct();
-        // Your own constructor code
-    }
-
-    public function index()
-    {
-
-?>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
+<!-- Login Modal -->
+<div class="modal fade" id="login-modal" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -51,9 +36,31 @@ class Login extends CI_Controller {
         </div>
     </div>
 </div>
+<!-- End Login Modal -->
 
-<?php
+<script type="text/javascript">
 
-    }
-}
-?>
+    $(document).ready(function() {
+        $("#loginButton").click(function(){
+
+            /****************** 2017-09-21 Jack *******************/
+            $('#login-failed').css('height',0);
+
+            login({
+                success: function(data={}){
+                    $wait_time = parseFloat($('.modal').css('transition').match(/\d+(\.\d+)?/)[0]) * 1000 || 150;
+                    $('.modal').removeClass('show');
+                    setTimeout(function(){
+                        window.location.href = data.redirect;
+                    }, $wait_time);
+                },
+                error: function(data={}){
+                    if ($('#login-failed').length) $('#login-failed').html(data.message);
+                    else $("#loginButton").after($('<p id="login-failed" style="height:0">'+data.message+'</p>'));
+                    setTimeout(function(){$('#login-failed').css('height',$('#login-failed')[0].scrollHeight);}, 20);
+                }
+            });
+
+        });
+    });
+</script>

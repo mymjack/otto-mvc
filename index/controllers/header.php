@@ -22,7 +22,7 @@ class Header extends CI_Controller {
         //         </a>';
         // } else {
             $data['user_button'] = '
-                <a class="btn btn-sm btn-bordered fs-12 btn-white" data-toggle="modal" data-target="#myModal" data-text="Log In">
+                <a class="btn btn-sm btn-bordered fs-12 btn-white" data-toggle="modal" data-target="#login-modal" data-text="Log In">
                     Log In
                 </a>';
         // }

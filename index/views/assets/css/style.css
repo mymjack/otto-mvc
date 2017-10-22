@@ -84,3 +84,7 @@ body.modal-open[style] {
   -o-transition: height 0.2s;
   transition: height 0.2s;
 }
+
+/* Progress bar fix */
+.pace-dark .pace .pace-progress-inner { box-shadow: 0 0 10px #000, 0 0 5px #000; }
+.pace-dark .pace .pace-activity { display: none; }
