@@ -99,10 +99,10 @@ class Register extends CI_Controller {
 
         // $this->load->controller('Header');
         // $this->load->controller('Footer');
-        // $this->load->controller('modals/ModalLogin');
+        $this->load->controller('modals/ModalLogin');
         // $data['header'] = $this->controller_header->index();
         // $data['footer'] = $this->controller_footer->index();
-        // $data['modal_login'] = $this->controller_modallogin->index();
+        $data['modal_login'] = $this->controller_modallogin->index();
         $data['body_classes'] = $this->document->render_body_classes();
 
         // Start the output

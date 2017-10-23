@@ -68,3 +68,28 @@
 
 .modal-btn { padding: 5px; border-radius: 2px; cursor: pointer; transition: background-color 0.2s; }
 .modal-btn:hover { padding: 5px; border-radius: 2px; background-color: #ddd;}
+
+.widget:before {
+    background-repeat: repeat-x;
+    content: " ";
+    left: 0;
+    right: 0;
+    height: 325px;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+  }
+.widget span.label {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+}
+.widget .card-block { 
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+.widget:hover .card-block { 
+  -webkit-transform: translateY(-10px); 
+  -moz-transform: translateY(-10px); 
+  transform: translateY(-10px); 
+}

@@ -82,11 +82,17 @@
           </form>
           <button id="registerButton" class="btn btn-primary btn-cons m-t-10" type="submit">Register</button>
           <!--END Login Form-->
+          <br/>
+          <br/>
+          <p> <?=$text_have_account?> 
+            <a data-toggle="modal" data-target="#login-modal" data-text="Log In"><?=$link_login?></a>
+          </p>
         </div>
       </div>
       <!-- END Login Right Container-->
     </div>
 
+    <?=$modal_login?>
     <!-- BEGIN VENDOR JS -->
     <?=$footer_scripts?>
 
