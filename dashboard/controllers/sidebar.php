@@ -40,7 +40,6 @@ class Sidebar extends CI_Controller {
         $data['menus'][] = array(
             'title'       => $this->lang->line('link_dashboard'),
             'href'        => APPURL,
-            // 'detail'      => '',
             'padding_top' => true,
             'icon'        => 'pg-home',
             'active'      => true
@@ -48,20 +47,20 @@ class Sidebar extends CI_Controller {
         $data['menus'][] = array(
             'title'       => $this->lang->line('link_flights'),
             'href'        => APPURL . 'flights',
-            'detail'      => '',
+            'details'      => $data['flight_count']. ' ' . $this->lang->line('text_flights'),
             'padding_top' => true,
             'icon'        => 'fa fa-plane'
         );
         $data['menus'][] = array(
             'title'       => $this->lang->line('link_orders'),
             'href'        => APPURL . 'orders',
-            'detail'      => '',
+            'details'      => $data['order_count']. ' ' . $this->lang->line('text_orders'),
             'icon'        => 'fa fa-truck'
         );
         $data['menus'][] = array(
             'title'       => $this->lang->line('link_items'),
             'href'        => APPURL . 'items',
-            'detail'      => '',
+            'details'      => $data['item_count']. ' ' . $this->lang->line('text_items'),
             'icon'        => 'pg-bag'
         );
         $data['menus'][] = array(

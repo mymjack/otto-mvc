@@ -3,7 +3,7 @@
   
   <!-- BEGIN SIDEBAR MENU HEADER-->
   <div class="sidebar-header">
-    <img src="<?=IMAGECOMMONURL?>logos/logo_white.png" alt="OTTO" class="brand" data-src="<?=IMAGECOMMONURL?>logos/logo_white.png" data-src-retina="<?=IMAGECOMMONURL?>logos/logo_white_2x.png" width="78" height="22">
+    <img src="<?=IMAGECOMMONURL?>logos/logo_white.png" alt="OTTO" class="brand" data-src="<?=IMAGECOMMONURL?>logos/logo_white.png" data-src-retina="<?=IMAGECOMMONURL?>logos/logo_white_2x.png" width="78" >
 
     <div class="sidebar-header-controls">
       <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20 hidden-md-down" data-pages-toggle="#appMenu" style="visibility: hidden;"><i class="fa fa-angle-down fs-16"></i>
@@ -22,8 +22,9 @@
 
       <?php  foreach ($menus as $menu) { ?>
           <li class="<?php if (isset($menu['padding_top']) && $menu['padding_top']) { ?> m-t-30 <?php } ?>
-            <?php if (isset($menu['active']) && $menu['active']) { ?> active <?php } ?> ">
-            <a href="<?=$menu['href']?>">
+            <?php if (isset($menu['active']) && $menu['active']) { ?> active <?php } ?>
+          ">
+            <a href="<?=$menu['href']?>" class="<?php if (isset($menu['details'])) { ?> detailed <?php } ?>">
               <span class="title"><?=$menu['title']?></span>
               <?php if (isset($menu['details'])) { ?>
                 <span class="details"><?=$menu['details']?></span>
