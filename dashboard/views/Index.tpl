@@ -2,10 +2,7 @@
 <html>
   <?=$head?>
   <body class="fixed-header <?=$body_classes?>">
-    <!-- BEGIN SIDEBPANEL-->
     <?=$sidebar?>
-    <!-- END SIDEBAR -->
-    <!-- END SIDEBPANEL-->
     <!-- START PAGE-CONTAINER -->
     <div class="page-container ">
       <!-- START HEADER -->

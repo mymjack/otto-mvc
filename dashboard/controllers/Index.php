@@ -21,7 +21,6 @@ class Index extends CI_Controller {
         $this->document->set_title($this->lang->line('title'));
         $data = $this->lang->language;
 
-    // <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
     // <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
     // <link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
     // <link href="assets/plugins/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css" media="screen" />
@@ -31,13 +30,11 @@ class Index extends CI_Controller {
     // <link href="assets/plugins/jquery-metrojs/MetroJs.css" rel="stylesheet" type="text/css" media="screen" />
 
 
-    // <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
     // <script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
     // <script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
     // <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
     // <script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
     // <script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
-    // <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
     // <script type="text/javascript" src="assets/plugins/select2/js/select2.full.min.js"></script>
     // <script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
     // <script src="assets/plugins/switchery/js/switchery.min.js" type="text/javascript"></script>
@@ -66,7 +63,7 @@ class Index extends CI_Controller {
         $this->document->add_style('assets/tether/css/tether.min.css');
         $this->document->add_style('assets/bootstrap/css/bootstrap3.min.css');
         $this->document->add_style('assets/font-awesome/css/font-awesome.css');
-        // $this->document->add_style('assets/swiper/css/swiper.css');
+        $this->document->add_style('assets/jquery-scrollbar/jquery.scrollbar.css'); // Sidebar
 
         // Styles
         $this->document->add_style('assets/css/pages.css');
@@ -82,13 +79,11 @@ class Index extends CI_Controller {
         $this->document->add_footer_script('assets/js/pages.image.loader.js');
         $this->document->add_footer_script('assets/tether/js/tether.min.js');
         $this->document->add_footer_script('assets/bootstrap/js/bootstrap3.js');
-        // $this->document->add_footer_script('assets/swiper/js/swiper.jquery.min.js');
-        // $this->document->add_footer_script('assets/velocity/velocity.min.js');
-        // $this->document->add_footer_script('assets/velocity/velocity.ui.js');
-        // $this->document->add_footer_script('assets/jquery-appear/jquery.appear.js');
-        // $this->document->add_footer_script('assets/animateNumber/jquery.animateNumbers.js');
+        $this->document->add_footer_script('assets/jquery-scrollbar/jquery.scrollbar.min.js'); //Sidebar
+        $this->document->add_footer_script('assets/modernizr.custom.js'); //Sidebar
 
         // $this->document->add_footer_script('assets/js/pages.frontend.js');
+        $this->document->add_footer_script('assets/js/pages.min.js');
         $this->document->add_footer_script('assets/js/custom.js');
         $this->document->add_footer_script('assets/js/dashboard.js');
         $this->document->add_footer_script('assets/js/scripts.js');
@@ -114,6 +109,7 @@ class Index extends CI_Controller {
               .widget-shipments:after { background-image: url('.IMAGEURL.'person-cropped.jpg); }
               .widget-orders:after { background-image: url('.IMAGEURL.'order-cropped.jpg); }
               .card-icon-refresh-lg-white { background-image: url('.IMAGECOMMONURL.'progress/progress-circle-lg-white-static.svg); }
+              .card-icon-refresh-lg-white { background-image: none; }
               .widget:before { background-image: url('.IMAGEURL.'linear_gradient.png); }
             </style>
         ';
@@ -126,13 +122,13 @@ class Index extends CI_Controller {
 
         // $this->load->controller('Header');
         // $this->load->controller('Footer');
-        // $this->load->controller('Sidebar');
+        $this->load->controller('Sidebar');
         // $data['header'] = $this->controller_header->index();
         // $data['footer'] = $this->controller_footer->index();
-        // $data['sidebar'] = $this->controller_sidebar->index();
+        $data['sidebar'] = $this->controller_sidebar->index();
         $data['header'] = '';
         $data['footer'] = '';
-        $data['sidebar'] = '';
+        // $data['sidebar'] = '';
         $data['body_classes'] = $this->document->render_body_classes();
 
         // Start the output
